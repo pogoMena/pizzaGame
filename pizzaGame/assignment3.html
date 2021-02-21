@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Michael Mena, student number: 000817498
+     Date completed: 11/13/2020
+
+     This program is designed as a game called "find the pizza"
+     there is a picture of pizza that is hidden after the first click
+     when the mouse hovers over the picture it becomes visible
+     The user must click on the picture while hovering over it to score a point
+     If the user scrolls past without clicking, the game is over
+     The eyes of the background image follows the general direction of the pizza (not exactly, but reasonably accuratley)
+-->
+
+<html>
+
+<head>
+    <title>Hello World</title>
+    <script src="assignment3.js"></script>
+    <link rel="stylesheet" href="assignment3.css">
+</head>
+<body>
+    
+    <h1 id='header'>Wheres the pizza?!</h1>
+    <h2 id='score'> Score: 0 Click the first pizza to start!</h2>
+    <input type="button" id = "helpMe" value="Help" >
+    <p id ="help"></p>
+    
+    <!-- The form for the game that becomes invisible after interaction -->
+    <div id="gameForm" >
+        <form id="gameInfo" method="post" action="assignment3.js">
+            <label for="name">Name: <span id="nameLabel"></span></label>
+            <input type="text" id="name" placeholder="Your name here" required autofocus>
+            <label for="age">Age: <span id="ageLabel"></span></label>
+            <input type="number" id="age" min="1" value="1" required>
+            <label for="color"> Favorite Color: </label>
+            <input type="text" id="color" required>
+            <input type="button" id = "clickMe" value="submit" >
+        </form>
+    </div>
+    
+    
+    <!-- The container for the picture of pizza -->
+    <div id='container' class="container">
+        <img id='pic' src='stockpizza.jpeg' alt='pizza image'>
+    </div>
+    
+    <!-- the container for the white of the eye -->
+    <div id="eyeOutsideContainer">
+        <span id = "eye1" class="eye"></span>
+        <span id = "eye2" class="eye"></span>
+    </div>
+    
+    <!--the container for the pupils of the eyes -->
+    <div id='eyeContainer'>
+        <span id = "dot1" class="dot"></span>
+        <span id = "dot2" class="dot"></span>
+    </div>
+</body>

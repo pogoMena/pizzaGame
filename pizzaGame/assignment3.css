@@ -1,0 +1,122 @@
+/*   Michael Mena, student number: 000817498
+     Date completed: 11/13/2020
+
+     This program is designed as a game called "find the pizza"
+     there is a picture of pizza that is hidden after the first click
+     when the mouse hovers over the picture it becomes visible
+     The user must click on the picture while hovering over it to score a point
+     If the user scrolls past without clicking, the game is over
+     The eyes of the background image follows the general direction of the pizza (not exactly, but reasonably accuratley)
+*/
+h1{
+    text-align: center;
+}
+
+body{
+    background-image: url("italianchef.jpg");
+    background-repeat: no-repeat;
+    background-size: 1500px; 
+    background-color: bisque;
+
+
+}
+/*the actual game form*/
+#gameInfo{ 
+    width: 100px;
+    height: 200px;
+    
+}
+/*the container for the game form */
+#gameForm{
+    position: relative;
+    text-align:center;
+    border:5px solid black;
+    background-color: lightblue;
+    padding:10px;
+    width: 200px;
+    margin-left: 650px;
+    margin-top: 180px;
+    z-index: 1000;
+
+}
+/*Container for the image of pizza */
+.container{
+
+    position: absolute;
+    visibility: visible;
+    left: 670px;
+    top: 370px;
+    z-index: -1;
+}
+/*image of pizza */
+img{
+    width: 200px;
+    height: 140px;
+}
+
+/* container for the pupils of the eyes*/
+#eyeContainer{
+    width: 270px;
+    left: 970px;
+    top: 280px;
+    position: absolute;
+    z-index: 5;
+}
+
+/*Container for the white of the eyes*/
+#eyeOutsideContainer{
+    left: 970px;
+    top: 280px;
+    width: 270px;
+    height: 85px;
+    position: absolute;
+    z-index: 4;
+}
+
+/*the dots of the eyes*/
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: black;
+  border: solid 3px brown;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/*The white of the eyes*/
+.eye{
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border: solid 3px white;
+  border-radius: 50%;
+  display: inline-block;
+}
+/*left eye*/
+#eye1{
+    margin-right: 135px;
+    margin-top: 25px;
+}
+/*right eye*/
+#eye2{
+    margin-bottom: 15px;
+}
+/*left pupil*/
+#dot1{
+    margin-right: 155px;
+    margin-top: 35px;
+    margin-left: 3%;
+}
+/*right pupil*/
+#dot2{
+    margin-bottom:15px;
+}
+/*help button*/
+#help{
+    color: white;
+    background-color: black;
+    width: 350px;
+}
+
+
+
